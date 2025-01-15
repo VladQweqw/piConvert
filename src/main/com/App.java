@@ -98,6 +98,8 @@ public class App {
                 File selectedFile = fileChooser.getSelectedFile();
                 this.filePath = selectedFile.getAbsolutePath();
 
+                selectedExtensionElement.setText("." + getExtension(
+                        new File(filePath).getName()));
                 UpdateImage();
             }else {
                 this.filePath = "";
